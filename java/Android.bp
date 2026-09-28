@@ -46,7 +46,7 @@ android_library {
     ],
     srcs: [
         ":imsstack-java-common-srcs",
-        "src/com/android/imsstack/core/agents/DomainSelectionEmergencyModeMonitor.java",
+        "src/com/android/imsstack/core/agents/DomainSelectionEmergencyModeMonitorCompat.java",
     ],
     aidl: {
         include_dirs: [
