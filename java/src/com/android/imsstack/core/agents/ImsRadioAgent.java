@@ -385,12 +385,6 @@ public class ImsRadioAgent implements ImsRadioInterface {
 
     @VisibleForTesting
     protected void handleBarringInfo(BarringInfo barringInfo) {
-        CellIdentity ci = barringInfo.getCellIdentity();
-        if (ci instanceof CellIdentityNr) {
-            ImsLog.i(this, mSlotId, "handleBarringInfo: Ignoring, cellType=NR");
-            return;
-        }
-
         SsacInfo ssacInfo = new SsacInfo();
 
         BarringServiceInfo mmtelVoice = barringInfo.getBarringServiceInfo(
